@@ -46,6 +46,7 @@ cd extension && zip -r ../dist/play-console-dark-theme.zip . && cd ..
 
 The extension is free. If it saves your eyes, you can leave a tip by right-clicking the toolbar icon, or here:
 
+- [Buy Me a Coffee](https://buymeacoffee.com/maksforge): card, Apple Pay or Google Pay, no account needed
 - [PayPal](https://paypal.me/maksymiliansredniawa)
 
 ## Disclaimer
