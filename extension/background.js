@@ -2,7 +2,7 @@ const KEY = 'pcdEnabled';
 
 // Tip options shown in the toolbar icon's right-click menu.
 const TIPS = [
-  { id: 'tip-card',   title: '☕ Tip by card / Apple Pay / Google Pay', url: '__CARD_TIP_URL__' },
+  { id: 'tip-card',   title: '☕ Tip by card / Apple Pay / Google Pay', url: 'https://buymeacoffee.com/maksforge' },
   { id: 'tip-paypal', title: '💙 Tip with PayPal',                       url: 'https://paypal.me/maksymiliansredniawa' }
 ];
 
