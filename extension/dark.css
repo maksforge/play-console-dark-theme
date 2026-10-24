@@ -1,0 +1,15 @@
+/* The built-in dark theme recolours everything inside the console, but the
+   page itself has no background, so the browser's default white shows
+   through. Fill it with the theme's own surface colour. */
+html.pcd-on,
+html.pcd-on body {
+  background: #131314 !important;
+  color-scheme: dark; /* dark scrollbars and native form controls */
+}
+
+/* The "Google Play Console" logo is an SVG with dark grey text.
+   Invert it, then rotate hues back so the coloured triangle keeps its colours. */
+html.pcd-on img.console-logo,
+html.pcd-on img[src*="logos/play_console"] {
+  filter: invert(1) hue-rotate(180deg) brightness(1.15);
+}
