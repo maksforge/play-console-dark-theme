@@ -138,6 +138,20 @@ html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-fie
   color: #c4c7c5 !important;
 }
 
+/* Disabled outlined text fields fall back to light-theme greys, so their text and outline vanish;
+   use 38% light for text, like other disabled controls, and 12% for the outline. */
+html.pcd-on {
+  --gm-outlinedtextfield-ink-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-label-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-placeholder-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-helper-text-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-character-counter-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-icon-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-prefix-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-suffix-color--disabled: rgba(227, 227, 227, 0.38);
+  --gm-outlinedtextfield-outline-color--disabled: rgba(227, 227, 227, 0.12);
+}
+
 /* Invalid text fields and error panels keep the light-theme error red, too dark
    on the dark surface; fields set it with long selectors, hence !important. */
 html.pcd-on .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label,
