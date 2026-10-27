@@ -122,13 +122,30 @@ html.pcd-on .gm3-button.mdc-button--text {
   --acx-comp-text-button--mdc-label-text-disabled-color: rgba(227, 227, 227, 0.38) !important;
 }
 
-/* Outlined text fields keep light-theme grey labels, helper text and character counters. */
+/* Outlined text fields keep light-theme grey labels, helper text, character
+   counters and, worst of all, near-black typed text and placeholders. */
 html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label {
   color: #c4c7c5;
 }
 html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-character-counter,
 html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-helper-text {
   color: #c4c7c5 !important;
+}
+html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #e3e3e3 !important;
+}
+html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+  color: #c4c7c5 !important;
+}
+
+/* Invalid text fields keep the light-theme error red for their label, message
+   and counter, which is too dark on the dark surface. */
+html.pcd-on .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label,
+html.pcd-on .mdc-text-field--invalid:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line :is(.mdc-text-field-helper-text, .mdc-text-field-character-counter) {
+  color: #f2b8b5 !important;
+}
+html.pcd-on error-panel .error {
+  color: #f2b8b5;
 }
 
 /* The light-theme orange of "recommended" labels is too dark on the dark surface. */
