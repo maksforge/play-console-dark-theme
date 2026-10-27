@@ -2,6 +2,8 @@
 
 A free Chrome extension that turns on a dark mode for the [Google Play Console](https://play.google.com/console).
 
+Website: [maksforge.com/play-console-dark-theme](https://maksforge.com/play-console-dark-theme/) · [Privacy policy](https://maksforge.com/play-console-dark-theme/privacy-policy.html)
+
 ![Play Console app dashboard in dark mode](docs/screenshot-1-app-dashboard.png)
 
 ## Why it looks right

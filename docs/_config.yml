@@ -1,0 +1,9 @@
+remote_theme: maksforge/pages-theme
+plugins:
+  - jekyll-remote-theme
+title: Dark Theme for Play Console
+description: A Chrome extension that switches on Google Play Console's hidden dark palette.
+maksforge:
+  icon: /assets/icons/play-console-dark-theme.webp
+  status: live
+  chrome: https://chromewebstore.google.com/detail/dark-theme-for-play-conso/fgihoebnjomkgmhibmfcefkofiipfnnl
