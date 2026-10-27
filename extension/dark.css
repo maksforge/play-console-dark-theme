@@ -14,11 +14,11 @@ html.pcd-on img[src*="logos/play_console"] {
   filter: invert(1) hue-rotate(180deg) brightness(1.15);
 }
 
-/* Statistics charts paint an opaque white canvas the theme can't recolour.
-   Invert to the page surface, then rotate hues back so series keep their colours.
-   Scoped to Statistics: dashboard KPI canvases are transparent and already dark. */
-html.pcd-on statistics-page .aplos-chart canvas,
-html.pcd-on statistics-page full-series-icon .icon {
+/* content.js marks charts that paint an opaque white canvas. Invert them to the
+   page surface, then rotate hues back so series keep their colours; the chart's
+   legend swatches get the same treatment so they still match the lines. */
+html.pcd-on canvas.pcd-invert,
+html.pcd-on :is(time-series-chart, ordinal-chart):has(canvas.pcd-invert) console-legend .icon {
   filter: invert(0.925) hue-rotate(180deg);
 }
 
@@ -46,4 +46,16 @@ html.pcd-on .popup-wrapper .menu-item-label-section {
 }
 html.pcd-on .console-date-picker .label-text {
   color: #c4c7c5;
+}
+
+/* Feature-tour dialogs keep a white card behind the theme's light text. */
+html.pcd-on .navigation-with-pages-container .page-container {
+  background: #1b1b1b;
+}
+
+/* Filter and suggestion chips keep light-theme colours; the console sets them
+   with long selectors, hence !important. */
+html.pcd-on material-chip.themeable {
+  background-color: rgba(168, 199, 250, 0.16) !important;
+  color: #a8c7fa !important;
 }

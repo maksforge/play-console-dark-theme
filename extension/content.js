@@ -29,3 +29,24 @@ chrome.storage.onChanged.addListener((changes, area) => {
 // The console is a single-page app; if it ever rewrites <html> classes,
 // put ours back.
 new MutationObserver(apply).observe(root, { attributes: true, attributeFilter: ['class'] });
+
+// Some charts paint an opaque white canvas the theme can't recolour, while
+// others are transparent and already dark. Mark the white ones for dark.css.
+function isOpaqueWhite(canvas) {
+  if (!canvas.width || !canvas.height) return false;
+  try {
+    const [r, g, b, a] = canvas.getContext('2d').getImageData(1, 1, 1, 1).data;
+    return a === 255 && r > 245 && g > 245 && b > 245;
+  } catch {
+    return false;
+  }
+}
+
+function markWhiteCharts() {
+  if (!enabled) return;
+  for (const canvas of document.querySelectorAll('.aplos-chart canvas:not(.pcd-invert)')) {
+    if (isOpaqueWhite(canvas)) canvas.classList.add('pcd-invert');
+  }
+}
+
+setInterval(markWhiteCharts, 1000);
