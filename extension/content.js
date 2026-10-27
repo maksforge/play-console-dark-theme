@@ -42,10 +42,18 @@ function isOpaqueWhite(canvas) {
   }
 }
 
+// Charts paint their background on first render; stop polling a canvas that
+// still isn't white after this many checks so it isn't read back forever.
+const MAX_CHECKS = 10;
+const checks = new WeakMap();
+
 function markWhiteCharts() {
   if (!enabled) return;
   for (const canvas of document.querySelectorAll('.aplos-chart canvas:not(.pcd-invert)')) {
+    const count = checks.get(canvas) || 0;
+    if (count >= MAX_CHECKS) continue;
     if (isOpaqueWhite(canvas)) canvas.classList.add('pcd-invert');
+    else checks.set(canvas, count + 1);
   }
 }
 
