@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dark Theme for Play Console (Unofficial)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turns on Google Play Console's built-in dark theme. Click the toolbar icon to switch it on or off. Not affiliated with Google.",
   "permissions": ["storage", "contextMenus"],
   "background": {
