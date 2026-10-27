@@ -51,7 +51,7 @@ function markWhiteCharts() {
   if (!enabled) return;
   for (const canvas of document.querySelectorAll('.aplos-chart canvas:not(.pcd-invert)')) {
     const count = checks.get(canvas) || 0;
-    if (count >= MAX_CHECKS) continue;
+    if (count >= MAX_CHECKS || !canvas.width || !canvas.height) continue;
     if (isOpaqueWhite(canvas)) canvas.classList.add('pcd-invert');
     else checks.set(canvas, count + 1);
   }
