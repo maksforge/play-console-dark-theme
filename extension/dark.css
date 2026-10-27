@@ -122,8 +122,8 @@ html.pcd-on .gm3-button.mdc-button--text {
   --acx-comp-text-button--mdc-label-text-disabled-color: rgba(227, 227, 227, 0.38) !important;
 }
 
-/* Outlined text fields keep light-theme grey labels, helper text and near-black
-   typed text and placeholders, set with long selectors, hence !important. */
+/* Outlined text fields keep light-theme grey labels, helper text, counters and
+   near-black typed text and placeholders, set with long selectors, hence !important. */
 html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label {
   color: #c4c7c5;
 }
