@@ -138,8 +138,8 @@ html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-fie
   color: #c4c7c5 !important;
 }
 
-/* Disabled text fields fall back to light-theme greys, so their text, helper text
-   and outline vanish; use the same 38% light as other disabled controls. */
+/* Disabled outlined text fields fall back to light-theme greys, so their text and outline vanish;
+   use 38% light for text, like other disabled controls, and 12% for the outline. */
 html.pcd-on {
   --gm-outlinedtextfield-ink-color--disabled: rgba(227, 227, 227, 0.38);
   --gm-outlinedtextfield-label-color--disabled: rgba(227, 227, 227, 0.38);
