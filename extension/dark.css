@@ -59,3 +59,32 @@ html.pcd-on material-chip.themeable {
   background-color: rgba(168, 199, 250, 0.16) !important;
   color: #a8c7fa !important;
 }
+html.pcd-on material-chip.themeable * {
+  color: inherit !important;
+}
+
+/* Outside popups, icon and text buttons keep light-theme icon and disabled
+   colours, so arrows look grey and disabled buttons disappear. The console
+   declares these on the button itself with long selectors, hence !important. */
+html.pcd-on material-button:not(.acx-overlay-container *) {
+  --acx-comp-icon-button--icon-color: #c4c7c5 !important;
+  --acx-comp-icon-button--icon-disabled-color: rgba(227, 227, 227, 0.38) !important;
+}
+html.pcd-on .gm3-button .mdc-button--text,
+html.pcd-on .gm3-button.mdc-button--text {
+  --acx-comp-text-button--label-text-disabled-color: rgba(227, 227, 227, 0.38) !important;
+  --acx-comp-text-button--mdc-label-text-disabled-color: rgba(227, 227, 227, 0.38) !important;
+}
+
+/* Outlined text fields keep light-theme grey labels and character counters. */
+html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label {
+  color: #c4c7c5;
+}
+html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-character-counter {
+  color: #c4c7c5 !important;
+}
+
+/* The light-theme orange of "recommended" labels is too dark on the dark surface. */
+html.pcd-on .recommendedTitlePart {
+  color: #fcad70;
+}
