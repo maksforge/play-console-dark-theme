@@ -42,6 +42,10 @@ cd extension && zip -r ../dist/play-console-dark-theme.zip . && cd ..
 - Chart axis lines on the app dashboard stay light.
 - Google may change Play Console's internals at any time, which could break the theme until the extension is updated.
 
+## Contact
+
+Found a screen that's still bright, or something broke? Email [playconsoledark.support@maksforge.com](mailto:playconsoledark.support@maksforge.com) or [open an issue](https://github.com/maksforge/play-console-dark-theme/issues).
+
 ## Support
 
 The extension is free. If it saves your eyes, you can leave a tip by right-clicking the toolbar icon, or here:
