@@ -28,6 +28,35 @@ html.pcd-on .popup-wrapper {
   --acx-comp-popup--popup-container-color: #1b1b1b;
 }
 
+/* The dark palette never defines the elevated-surface tokens, so popup lists
+   (the account menu), rich tooltips and raised buttons fall back to white; nor
+   the hover and focus tints, which fall back to a dark grey that vanishes on
+   dark surfaces, hiding keyboard focus in lists. */
+html.pcd-on {
+  --acx-sys-color--surface-1-elevation: #1b1b1b;
+  --acx-sys-color--surface-2-elevation: #1b1b1b;
+  --acx-sys-color--surface-3-elevation: #1b1b1b;
+  --acx-sys-color--surface-hover: rgba(227, 227, 227, 0.08);
+  --acx-sys-color--surface-focus: rgba(227, 227, 227, 0.12);
+}
+html.pcd-on .paper-popup .paper-container {
+  background: #1b1b1b;
+}
+
+/* Dropdown selects such as "Sort by" and "Show rows" keep light-theme item text
+   and selection colours; "Sort by" sets its selection with a long selector,
+   hence !important. */
+html.pcd-on .dropdown-popup material-select-item,
+html.pcd-on .material-dropdown-select-popup material-select-dropdown-item {
+  color: #e3e3e3;
+}
+html.pcd-on .dropdown-popup material-select-item.selected {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.pcd-on .material-dropdown-select-popup material-select-dropdown-item:is(.selected, .active, :hover, :focus) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 /* Parts of the date picker and popup menu lists keep light-theme colours. */
 html.pcd-on .console-date-picker .material-list,
 html.pcd-on .popup-wrapper .item-group-list {
@@ -46,6 +75,14 @@ html.pcd-on .popup-wrapper .menu-item-label-section {
 }
 html.pcd-on .console-date-picker .label-text {
   color: #c4c7c5;
+}
+html.pcd-on .console-date-picker material-button {
+  --acx-comp-icon-button--icon-color: #c4c7c5;
+  --acx-comp-icon-button--icon-disabled-color: rgba(227, 227, 227, 0.38);
+  --acx-comp-text-button--label-text-color: #a8c7fa;
+}
+html.pcd-on .console-date-picker .calendar-container .month:not(.boundary):not(.hover) {
+  color: #e3e3e3;
 }
 
 /* Feature-tour dialogs keep a white card behind the theme's light text. */
@@ -76,11 +113,12 @@ html.pcd-on .gm3-button.mdc-button--text {
   --acx-comp-text-button--mdc-label-text-disabled-color: rgba(227, 227, 227, 0.38) !important;
 }
 
-/* Outlined text fields keep light-theme grey labels and character counters. */
+/* Outlined text fields keep light-theme grey labels, helper text and character counters. */
 html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label {
   color: #c4c7c5;
 }
-html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-character-counter {
+html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-character-counter,
+html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-helper-text {
   color: #c4c7c5 !important;
 }
 
