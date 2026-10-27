@@ -21,7 +21,7 @@ Because it uses Google's own dark colours instead of inverting the page, text, c
 
 ## Install
 
-**Chrome Web Store:** coming soon.
+**Chrome Web Store:** [Dark Theme for Play Console (Unofficial)](https://chromewebstore.google.com/detail/dark-theme-for-play-conso/fgihoebnjomkgmhibmfcefkofiipfnnl)
 
 **From source:**
 
