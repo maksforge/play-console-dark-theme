@@ -39,7 +39,8 @@ cd extension && zip -r ../dist/play-console-dark-theme.zip . && cd ..
 
 ## Known limitations
 
-- Chart axis lines stay light.
+- Chart axis lines on the app dashboard stay light.
+- On the Statistics page, legend swatches under a chart keep their original colours, so they don't exactly match the recoloured lines.
 - Google may change Play Console's internals at any time, which could break the theme until the extension is updated.
 
 ## Support

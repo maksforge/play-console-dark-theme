@@ -13,3 +13,32 @@ html.pcd-on img.console-logo,
 html.pcd-on img[src*="logos/play_console"] {
   filter: invert(1) hue-rotate(180deg) brightness(1.15);
 }
+
+/* Statistics charts paint an opaque white canvas the theme can't recolour.
+   Invert to the page surface, then rotate hues back so series keep their colours.
+   Scoped to Statistics: dashboard KPI canvases are transparent and already dark. */
+html.pcd-on statistics-page .aplos-chart canvas {
+  filter: invert(0.925) hue-rotate(180deg);
+}
+
+/* The theme leaves the shared popup surface white; only menus override it.
+   This darkens the date picker and the chart hover cards to match. */
+html.pcd-on .popup-wrapper {
+  --acx-comp-popup--popup-container-color: #1b1b1b;
+}
+
+/* Parts of the date picker keep light-theme colours. */
+html.pcd-on .console-date-picker .material-list {
+  background: transparent;
+}
+html.pcd-on .console-date-picker .material-list .selected {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.pcd-on .console-date-picker .input-container,
+html.pcd-on .console-date-picker .input,
+html.pcd-on .console-date-picker .tgl-lbl {
+  color: #e3e3e3;
+}
+html.pcd-on .console-date-picker .label-text {
+  color: #c4c7c5;
+}
