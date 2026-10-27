@@ -66,7 +66,7 @@ html.pcd-on material-chip.themeable * {
 /* Outside popups, icon and text buttons keep light-theme icon and disabled
    colours, so arrows look grey and disabled buttons disappear. The console
    declares these on the button itself with long selectors, hence !important. */
-html.pcd-on material-button {
+html.pcd-on material-button:not(.acx-overlay-container *) {
   --acx-comp-icon-button--icon-color: #c4c7c5 !important;
   --acx-comp-icon-button--icon-disabled-color: rgba(227, 227, 227, 0.38) !important;
 }
@@ -80,7 +80,7 @@ html.pcd-on .gm3-button.mdc-button--text {
 html.pcd-on .mdc-text-field--outlined.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label {
   color: #c4c7c5;
 }
-html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line .mdc-text-field-character-counter {
+html.pcd-on .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) + .mdc-text-field-helper-line .mdc-text-field-character-counter {
   color: #c4c7c5 !important;
 }
 
