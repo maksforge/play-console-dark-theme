@@ -8,7 +8,7 @@ A free Chrome extension that turns on a dark mode for the [Google Play Console](
 
 Play Console already contains a complete dark colour palette. It just has no switch for it. This extension switches it on by adding the console's own `acx-dark-theme` class to the page, and fills in the page background the theme leaves white.
 
-Because it uses Google's own dark colours instead of inverting the page, text, cards, buttons and charts keep their intended look. The one exception is the Statistics charts: they are drawn on a canvas, so they are inverted.
+Because it uses Google's own dark colours instead of inverting the page, text, cards, buttons and charts keep their intended look. The one exception is charts drawn on a white canvas (Statistics, Android vitals, ratings and others), which are inverted.
 
 ![KPI charts in dark mode](docs/screenshot-2-charts.png)
 
